@@ -4,18 +4,22 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.opticus.daggertest.di.AppComponent;
+import com.squareup.otto.Bus;
 
-/**
- * Created by opticus on 09.10.15.
- */
-public class BaseActivity extends AppCompatActivity {
-//    protected ActComponent component;
+import javax.inject.Inject;
+
+public abstract class BaseActivity extends AppCompatActivity {
+
+    @Inject
+    protected Bus bus;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        initDiComponent();
         super.onCreate(savedInstanceState);
-//        component = DaggerActComponent.builder().actModule(new ActModule(this)).build();
     }
+
+    abstract protected void initDiComponent();
 
     protected AppComponent getAppComponent() {
         return ((App) getApplication()).getComponent();

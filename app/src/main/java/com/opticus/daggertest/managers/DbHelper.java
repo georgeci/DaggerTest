@@ -1,4 +1,4 @@
-package com.opticus.daggertest;
+package com.opticus.daggertest.managers;
 
 import android.content.Context;
 

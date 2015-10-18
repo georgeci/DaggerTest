@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import com.opticus.daggertest.di.HasComponent;
 import com.opticus.daggertest.di.SecondFrComponent;
+import com.opticus.daggertest.managers.DbHelper;
+import com.opticus.daggertest.managers.ManagerB;
 import com.squareup.otto.Bus;
 
 import javax.inject.Inject;
@@ -35,12 +37,16 @@ public class SecondFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        HasComponent<SecondFrComponent.PlusComponent> act = (HasComponent<SecondFrComponent.PlusComponent>) getActivity();
-        SecondFrComponent component = act.getComponent().plusSecondFrComponent();
-        component.inject(this);
         Log.i("GTAG", "2 fr db: " + (dbHelper == null ? "null" : ("" + dbHelper.hashCode() + (dbHelper.context == null))));
         Log.i("GTAG", "2 fr bus: " + (bus == null ? "null" : bus.hashCode()));
         Log.i("GTAG", "2 fr managerB: " + (managerB == null ? "null" : managerB.hashCode()));
+    }
+
+    @Override
+    protected void initDiComponent() {
+        SecondFrComponent.PlusComponent actComponent = getActComponent(SecondFrComponent.PlusComponent.class);
+        SecondFrComponent component = actComponent.plusSecondFrComponent();
+        component.inject(this);
     }
 
 

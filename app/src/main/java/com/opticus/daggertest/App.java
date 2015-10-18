@@ -7,6 +7,7 @@ import com.opticus.daggertest.di.AppComponent;
 import com.opticus.daggertest.di.AppModule;
 import com.opticus.daggertest.di.DaggerAppComponent;
 import com.opticus.daggertest.di.HasComponent;
+import com.opticus.daggertest.managers.DbHelper;
 
 import javax.inject.Inject;
 

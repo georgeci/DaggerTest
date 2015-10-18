@@ -3,7 +3,7 @@ package com.opticus.daggertest.di;
 import android.content.Context;
 
 import com.opticus.daggertest.FirstFragment;
-import com.opticus.daggertest.ManagerA;
+import com.opticus.daggertest.managers.ManagerA;
 import com.opticus.daggertest.di.scope.PerActivity;
 import com.opticus.daggertest.di.scope.PerFragment;
 import com.squareup.otto.Bus;

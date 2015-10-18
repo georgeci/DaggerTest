@@ -7,7 +7,7 @@ import dagger.Component;
 
 @PerActivity
 @Component(modules = {ActModule.class, BusModule.class}, dependencies = AppComponent.class)
-public interface ActComponent extends
+public interface MainActComponent extends
         SecondFrComponent.PlusComponent, // SubComponent way
         FirstFrComponent.HasFirstFrDepends {//Depends component way
 
