@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 import com.opticus.daggertest.di.DaggerFirstFrComponent;
 import com.opticus.daggertest.di.FirstFrComponent;
-import com.opticus.daggertest.di.HasComponent;
 import com.opticus.daggertest.managers.ManagerA;
 import com.squareup.otto.Bus;
 

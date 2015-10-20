@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.opticus.daggertest.di.HasComponent;
 import com.opticus.daggertest.di.SecondFrComponent;
 import com.opticus.daggertest.managers.DbHelper;
 import com.opticus.daggertest.managers.ManagerB;

@@ -34,7 +34,7 @@ public abstract class BaseFragment extends Fragment {
         bus.unregister(this);
     }
 
-    public <T> T getActComponent(Class<T> clazz){
+    public <T> T getActComponent(Class<T> clazz) {
         Activity activity = getActivity();
         HasComponent<T> has = (HasComponent<T>) activity;
         return has.getComponent();

@@ -11,9 +11,6 @@ import com.opticus.daggertest.managers.DbHelper;
 
 import javax.inject.Inject;
 
-/**
- * Created by opticus on 09.10.15.
- */
 public class App extends Application implements HasComponent<AppComponent> {
     @Inject
     DbHelper dbHelper;

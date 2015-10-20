@@ -1,7 +1,7 @@
 package com.opticus.daggertest.di;
 
-import com.opticus.daggertest.managers.ManagerB;
 import com.opticus.daggertest.di.scope.PerFragment;
+import com.opticus.daggertest.managers.ManagerB;
 
 import dagger.Module;
 import dagger.Provides;

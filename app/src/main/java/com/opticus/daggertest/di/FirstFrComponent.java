@@ -3,9 +3,8 @@ package com.opticus.daggertest.di;
 import android.content.Context;
 
 import com.opticus.daggertest.FirstFragment;
-import com.opticus.daggertest.managers.ManagerA;
-import com.opticus.daggertest.di.scope.PerActivity;
 import com.opticus.daggertest.di.scope.PerFragment;
+import com.opticus.daggertest.managers.ManagerA;
 import com.squareup.otto.Bus;
 
 import dagger.Component;
@@ -15,13 +14,13 @@ import dagger.Component;
 public interface FirstFrComponent {
     void inject(FirstFragment fragment);
 
-    @PerActivity
-    @Component(modules = {BusModule.class}, dependencies = AppComponent.class)
     interface HasFirstFrDepends {
         Bus bus();
 
+        Context context();
+
         ManagerA managerA();
 
-        Context context();
+
     }
 }

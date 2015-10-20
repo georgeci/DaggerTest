@@ -1,10 +1,7 @@
 package com.opticus.daggertest.di;
 
-import android.content.Context;
-
 import com.opticus.daggertest.SecondActivity;
 import com.opticus.daggertest.di.scope.PerActivity;
-import com.squareup.otto.Bus;
 
 import dagger.Component;
 
