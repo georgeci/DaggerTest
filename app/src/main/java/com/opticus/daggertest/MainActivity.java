@@ -1,7 +1,6 @@
 package com.opticus.daggertest;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.opticus.daggertest.di.ActModule;
@@ -13,23 +12,23 @@ import com.squareup.otto.Bus;
 
 import javax.inject.Inject;
 
+import dagger.Lazy;
+
 public class MainActivity extends BaseActivity implements HasComponent<MainActComponent> {
 
     MainActComponent actComponent;
 
     @Inject
-    Bus bus;
-    @Inject
-    ManagerA managerA;
+    Lazy<ManagerA> managerA;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i("GTAG", "mAct bus: " + (bus == null ? "null" : bus.hashCode()));
-        Log.i("GTAG", "mAct managerA: " + (managerA == null ? "null" : ("" + managerA.hashCode() + (managerA.context == null))));
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Log.i("GTAG", "mAct bus: " + bus.hashCode());
+        Log.i("GTAG", "mAct managerA: " + managerA.get().hashCode());
+        Log.i("GTAG", "mAct managerA: " + managerA.get().hashCode());
+        Log.i("GTAG", "mAct managerA: " + managerA.get().hashCode());
     }
 
     @Override

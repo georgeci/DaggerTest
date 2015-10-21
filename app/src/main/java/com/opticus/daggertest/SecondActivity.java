@@ -21,7 +21,7 @@ public class SecondActivity extends BaseActivity implements HasComponent<SecondA
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        Log.i("GTAG", "sAct bus: " + (bus == null ? "null" : bus.hashCode()));
+        Log.i("GTAG", "sAct bus: " + bus.hashCode());
     }
 
     @Override

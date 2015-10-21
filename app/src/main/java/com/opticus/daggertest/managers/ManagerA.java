@@ -7,7 +7,7 @@ import com.opticus.daggertest.di.scope.PerActivity;
 
 import javax.inject.Inject;
 
-@PerActivity
+
 public class ManagerA {
     public Context context;
 

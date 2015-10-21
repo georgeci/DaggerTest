@@ -4,4 +4,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="asunc_btn">Async Producer</string>
+    <string name="secong">Second Activity + 1 Fragment</string>
+    <string name="first">FirstActivity + 2 Fragments</string>
 </resources>

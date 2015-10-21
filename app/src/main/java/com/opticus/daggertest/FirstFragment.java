@@ -9,19 +9,14 @@ import android.view.ViewGroup;
 import com.opticus.daggertest.di.DaggerFirstFrComponent;
 import com.opticus.daggertest.di.FirstFrComponent;
 import com.opticus.daggertest.managers.ManagerA;
-import com.squareup.otto.Bus;
 
 import javax.inject.Inject;
+import javax.inject.Provider;
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class FirstFragment extends BaseFragment {
-    @Inject
-    Bus bus;
 
     @Inject
-    ManagerA managerA;
+    Provider<ManagerA> managerA;
 
     public FirstFragment() {
     }
@@ -35,8 +30,10 @@ public class FirstFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Log.i("GTAG", "1 fr bus: " + (bus == null ? "null" : bus.hashCode()));
-        Log.i("GTAG", "1 fr managerA: " + (managerA == null ? "null" : managerA.hashCode()));
+        Log.i("GTAG", "1 fr bus: " + bus.hashCode());
+        Log.i("GTAG", "1 fr managerA: " + managerA.get().hashCode());
+        Log.i("GTAG", "1 fr managerA: " + managerA.get().hashCode());
+        Log.i("GTAG", "1 fr managerA: " + managerA.get().hashCode());
     }
 
     @Override

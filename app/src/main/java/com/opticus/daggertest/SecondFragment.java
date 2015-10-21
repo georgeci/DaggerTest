@@ -36,9 +36,9 @@ public class SecondFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Log.i("GTAG", "2 fr db: " + (dbHelper == null ? "null" : ("" + dbHelper.hashCode() + (dbHelper.context == null))));
-        Log.i("GTAG", "2 fr bus: " + (bus == null ? "null" : bus.hashCode()));
-        Log.i("GTAG", "2 fr managerB: " + (managerB == null ? "null" : managerB.hashCode()));
+        Log.i("GTAG", "2 fr db: " + dbHelper.hashCode());
+        Log.i("GTAG", "2 fr bus: " + bus.hashCode());
+        Log.i("GTAG", "2 fr managerB: " + managerB.hashCode());
     }
 
     @Override

@@ -22,7 +22,7 @@ public class App extends Application implements HasComponent<AppComponent> {
 
         this.component = createComponent();
         component.inject(this);
-        Log.i("GTAG", "app db: " + (dbHelper == null ? "null" : ("" + dbHelper.hashCode() + (dbHelper.context == null))));
+        Log.i("GTAG", "app db: " + dbHelper.hashCode());
     }
 
     @Override
