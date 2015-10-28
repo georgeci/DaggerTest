@@ -25,7 +25,7 @@ public class AsyncInjectActivity extends AppCompatActivity {
                 .asyncModule(new AsyncModule())
                 .executor(Executors.newSingleThreadExecutor())
                 .build();
-        ListenableFuture<HugeManager> hugeManagerListenableFuture = component.hugeManager();
+        ListenableFuture<HugeManager> future = component.hugeManager();
     }
 
 }

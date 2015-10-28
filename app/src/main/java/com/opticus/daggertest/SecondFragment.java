@@ -17,8 +17,8 @@ public class SecondFragment extends BaseFragment {
 
     @Inject
     DbHelper dbHelper;
-    @Inject
-    Bus bus;
+//    @Inject
+//    Bus bus;
     @Inject
     ManagerB managerB;
 
