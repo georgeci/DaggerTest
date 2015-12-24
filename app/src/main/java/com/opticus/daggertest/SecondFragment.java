@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import com.opticus.daggertest.di.SecondFrComponent;
 import com.opticus.daggertest.managers.DbHelper;
 import com.opticus.daggertest.managers.ManagerB;
-import com.squareup.otto.Bus;
 
 import javax.inject.Inject;
 
@@ -17,8 +16,6 @@ public class SecondFragment extends BaseFragment {
 
     @Inject
     DbHelper dbHelper;
-//    @Inject
-//    Bus bus;
     @Inject
     ManagerB managerB;
 
